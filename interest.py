@@ -8,7 +8,7 @@ def variableInterest(principle, invest, take_out, interest_rate, years):
 	if years > 0:
 		variableInterest(new_principle, invest, take_out, interest_rate, years)
 	else:
-		again = input("Again?\n")
+		again = input("Keep new principle with different settings?\n")
 		if again == "y" or again == "Y":
 			userPrompts(new_principle)
 		else:
