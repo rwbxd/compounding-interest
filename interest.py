@@ -8,8 +8,8 @@ def variableInterest(principle, invest, take_out, interest_rate, years):
 	if years > 0:
 		variableInterest(new_principle, invest, take_out, interest_rate, years)
 	else:
-		again = input("Keep new principle with different settings?\n")
-		if again == "y" or again == "Y":
+		again = input("Keep new principle with different settings? (Y/N)\n")
+		if again.lower() in ("y", "yes"):
 			userPrompts(new_principle)
 		else:
 			return
@@ -20,9 +20,9 @@ def principlePrompt():
 
 def userPrompts(principle):
 	invest = int(input("How much are you investing per year?\n"));
-	take_out = int(input("What percent are you taking out per year?\n"))/100;
-	interest_rate = int(input("Interest rate? (In percent)\n"))/100;
-	years = int(input("Compund for how many years?\n"));
+	take_out = float(input("What percent are you taking out per year?\n"))/100;
+	interest_rate = float(input("Interest rate? (In percent)\n"))/100;
+	years = int(input("Compound for how many years?\n"));
 	variableInterest(principle, invest, take_out, interest_rate, years)
 
 principlePrompt();
