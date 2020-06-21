@@ -26,7 +26,4 @@ def userPrompts(principle):
 	variableInterest(principle, invest, take_out, interest_rate, years)
 
 principlePrompt();
-
-# variableInterest(0,10000,0,.05,2) Test Code
-
 input("Press ENTER to exit");
