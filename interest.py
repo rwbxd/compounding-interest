@@ -26,4 +26,10 @@ def userPrompts(principle):
 	variableInterest(principle, invest, take_out, interest_rate, years)
 
 principlePrompt();
-input("Press ENTER to exit");
+
+retry = input("Press ENTER to restart, type exit to close the program\n");
+
+if retry == "exit":
+	exit()
+else:
+	principlePrompt()
